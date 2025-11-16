@@ -1,13 +1,6 @@
-# MyCodingLearningJourney
-Code, concepts, and challenges—organized as I progress.
-
-
-Great! Here’s a polished, beginner-friendly but professional **README.md** you can use for your C++ coding journey repo.
-I’ve structured it so it looks clean on GitHub, shows ambition, and highlights that you’re learning with purpose.
-
----
-
 # **🚀 My C++ Coding Journey**
+
+** Code, concepts, and challenges—organized as I progress. **
 
 Welcome to the repository where I document my learning, experiments, and progress in **C++ programming**.
 This is my personal space to build strong fundamentals, practice data structures & algorithms, and grow consistently as I work toward a career in tech.
