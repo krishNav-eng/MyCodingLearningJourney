@@ -9,6 +9,12 @@ class Human {
         vector<string> hobbies;
         vector<string> friends;
 
+        // constructor
+        Human(string name, int age) {
+            this->name = name;
+            this->age = age;
+        }
+
         void introduce() {
             cout << "Hi, I'm " << name << " and I'm " << age << " years old." << endl;
         }
@@ -45,6 +51,7 @@ class Human {
 int main() {
     // to create an object we use the class name followed by the object name
 
-    Human Abhijay;
+    Human Abhijay("Abhijay", 20);
+    Abhijay.introduce();
     
 }
