@@ -2,7 +2,7 @@
 
 using namespace std;
 
-
+// input array must be sorted in ascending order
 int binarySearch(int arr[], int size, int target) {
     int left = 0;
     int right = size - 1;

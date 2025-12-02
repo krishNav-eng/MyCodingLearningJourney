@@ -9,25 +9,21 @@ using namespace std;
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
-        int l=0, r=nums.size()-1, mid;
+        int l=0,r=nums.size()-1;
         while(l<=r) {
-            mid = (l+r)/2;
-            if (nums[mid] == target) return mid;
-            if (nums[mid] < target) {
-               if (nums[l]<nums[mid]){ //left partition
-                    r = mid-1;
-                } else if (nums[l]>nums[mid]) { // right partition
-                    l = mid+1;
-                }
-            }
-            else {
-                if (nums[l]<nums[mid]) { // left partition
-                    l = mid+1;
-                } else if (nums[l]>nums[mid]) { // right partition
-                    r = mid-1;
-                }
+            int m = l + (r-l)/2;
+            if(nums[m]==target) return m;
+            if(nums[m]>=nums[l]){
+                // left half of the mid point is sorted correctly!
+                // check does the target value lies inside this correctly sorted half
+                // otherwise binary search in the other half.
+                if(nums[m]>target && nums[l]<=target) r=m-1;
+                else l=m+1;
+            } else {
+                if(nums[m]<target && nums[r]>=target) l=m+1;
+                else r=m-1;
             }
         }
-        return -1;
+        return -1
     }
 };
