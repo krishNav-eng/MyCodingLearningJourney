@@ -68,14 +68,5 @@ To build real skills that prepare me for internships and future software enginee
 I’m a college student passionate about tech, problem-solving, and building things through code.
 This repository marks the beginning of my coding journey—and I’m excited to see where it leads.
 
----
 
-If you want, I can also:
-
-🔹 Personalize it with **your name**
-🔹 Add badges, visuals, commit streak widgets
-🔹 Help you organize folders (e.g., `/Basics`, `/DSA`, `/Projects`)
-🔹 Add a professional GitHub profile README too
-
-Just tell me!
 
