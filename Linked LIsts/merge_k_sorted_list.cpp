@@ -16,7 +16,7 @@ public:
                 if (lists[i] && lists[i]->val < min_val) {
                     min_val = lists[i]->val;
                     idx = i;
-                }
+                }n
             }
 
             if (idx == -1) break;
