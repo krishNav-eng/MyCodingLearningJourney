@@ -52,3 +52,42 @@ public:
         return result;
     }
 };
+
+
+/*
+BRUTE FORCE LOGIC (more intituitive) - Linear Search
+    Iterate over every elements of num1 -> nums[i] = val and look for its answer before anything else
+    To look for it's next greater element in num2
+    1. Search Phase: Search for that element in nums2 which is equal to what we're looking for. Store it's index as k.
+    2. The Scan Phase: Starting from index j=k+1, look for an element in nums2 which is strictly greater
+                       If found -> nums2[j]=ans, result[i] = ans;
+                       else result[i]=-1; (used with help of flag!!)
+*/
+
+class BruteForceSolution {
+public:
+    vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
+        vector<int> result(nums1.size());
+        for(int i=0;<nums1.size();i++) {
+            int val=nums1[i];
+            // it is gauranteed that we'll find nums2[k]==val;
+            int k=0;
+            for(int j=0;j<nums2.size();j++) {
+                if(nums2[j]==val){
+                    k=j;
+                    break;
+                }
+            }
+            bool flag=false;
+            for(int j=k+1; j<nums2.size(); j++){
+                if(nums2[j]>val) {
+                    result[i]=nums2[j];
+                    flag=true;
+                    break;
+                }
+            }
+            if(!flag) result[i]=-1;
+        }
+        return result;
+    }
+}
